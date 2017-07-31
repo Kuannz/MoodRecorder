@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MoodTracker"
+             x:Class="MoodTracker.MainPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="20, 40, 20, 20"
+                    Android="20, 20, 20, 20"
+                    WinPhone="20, 20, 20, 20" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     Orientation="Vertical"
+                     Spacing="15">
+            <Label Text="How do you feel now?" />
+            <Entry x:Name="moodText" Text="It's a wonderful day!" />
+            <Button x:Name="enterMoodButton" Text="Record my mood" Clicked="OnMoodEntry" />
+            <Button x:Name="moodHistoryButton" Text="Past history" Clicked="OnMoodHistory" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
